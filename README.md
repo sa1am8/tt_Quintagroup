@@ -2,7 +2,7 @@
 
 ***
 
-This repository created as Test Task in QuanticGroup Company. Executing main file (main.py) makes API requests, that 
+This repository created as Test Task in Quintagroup Company. Executing main file (main.py) makes API requests, that 
 returns in console as grouped information in this order:
 
 * Information about every task (separated by 2 empty lines), that had been found in 
