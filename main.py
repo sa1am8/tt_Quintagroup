@@ -50,6 +50,7 @@ if __name__ == "__main__":
     workspace_info = get_workspaces_info()
     total_time = 0
     date = dict()
+
     for workspace in workspace_info:
         workspace_id = workspace.get('id')
         projects_info = get_projects_info(workspace_id)
