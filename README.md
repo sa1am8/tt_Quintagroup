@@ -63,6 +63,6 @@ Following instructions can be performed by next command:
 
 ***
 
-After successful setup run next command remain to get result:
+After successful setup run next command:
 
 > python main.py 
