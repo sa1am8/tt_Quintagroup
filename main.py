@@ -1,50 +1,5 @@
 import requests
-from additional import *
-
-
-def get_workspaces_info():
-    link = get_workspaces_link()
-    r = requests.get(link, headers=SECRET_HEADERS)
-    return r.json()
-
-
-def get_projects_info(workspace_id: str) -> dict:
-    link = get_projects_link(workspace_id)
-    r = requests.get(link, headers=SECRET_HEADERS)
-    return r.json()
-
-
-def get_project_info(workspace_id: str, project_id: str) -> dict:
-    link = get_project_link(workspace_id, project_id)
-    r = requests.get(link, headers=SECRET_HEADERS)
-    return r.json()
-
-
-def get_tasks_info(workspace_id: str, project_id: str) -> dict:
-    link = get_tasks_link(workspace_id, project_id)
-    r = requests.get(link, headers=SECRET_HEADERS)
-    return r.json()
-
-
-def get_task_info(workspace_id: str, project_id: str, task_id) -> dict:
-    link = get_task_link(workspace_id, project_id, task_id)
-    r = requests.get(link, headers=SECRET_HEADERS)
-    return r.json()
-
-
-def get_users(workspace_id):
-    link = get_users_link(workspace_id)
-    r = requests.get(link, headers=SECRET_HEADERS)
-    return r.json()
-
-
-def get_time_entries(workspace_id, user_id):
-    link = get_time_entries_link(workspace_id, user_id)
-    r = requests.get(link, headers=SECRET_HEADERS)
-    return r.json()
-
-
-
+from utils import *
 
 if __name__ == "__main__":
     workspace_info = get_workspaces_info()
@@ -72,7 +27,6 @@ if __name__ == "__main__":
                     date[start] = normal_format_to_sec(duration)
                 else:
                     date[start] += normal_format_to_sec(duration)
-
 
         for project in projects_info:
             project_id = project.get('id')

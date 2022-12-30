@@ -36,14 +36,15 @@ costRate - None
 Using Python 3.7
 
 In this solution used FOP principles. Used requests library to use API methods.
-In utils.py created a few get_links() functions, to order separate from main.py all strings written by API.
-Also here determinated global variables.
+In utils.py created a few get_links() and get_info() functions.
+
+In config.py determinated global variables.
 
 Main.py starts by getting information about every workspace (by provided api_key).
 After that for evey user in each workspace opens every time_entry in order to get time duration for all task grouped by day.
 Then, for every project it gets whole information about and counting sum duration.
 
-After all manipulations, code execution prints information mentioned in INTRODUCTION
+After all manipulations, code execution prints information mentioned in INTRODUCTION.
 
 Also there oop_solution.py file, that contains unfinished code solution using OOP principles.
 

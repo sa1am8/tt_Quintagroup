@@ -1,5 +1,5 @@
 import requests
-from additional import *
+from utils import *
 
 
 class Projects:
