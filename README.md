@@ -33,8 +33,10 @@ costRate - None
 
 ***
 
-In this solution I used FOP principles. Used requests library to use API methods.
-In additional.py I created a few get_links() functions, to order separate from main.py all strings written by API.
+Using Python 3.7
+
+In this solution used FOP principles. Used requests library to use API methods.
+In utils.py created a few get_links() functions, to order separate from main.py all strings written by API.
 Also here determinated global variables.
 
 Main.py starts by getting information about every workspace (by provided api_key).
@@ -44,13 +46,17 @@ Then, for every project it gets whole information about and counting sum duratio
 After all manipulations, code execution prints information mentioned in INTRODUCTION
 
 Also there oop_solution.py file, that contains unfinished code solution using OOP principles.
-I will try end this solution variant too, but i am not sure. Winter Holidays are coming.
 
 ### SETUP ###
 
 ***
 
+
 For setup run next command:
+
+> git clone https://github.com/sa1am8/tt_Quintagroup.git
+
+> python venv /path/to/environmen
 
 > pip install -r requirements.txt
 
