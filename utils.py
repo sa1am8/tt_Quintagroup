@@ -2,9 +2,13 @@ import requests
 import datetime
 from config import *
 
+
+def get_json(link):
+    r = requests.get(link, headers=SECRET_HEADERS)
+    return r.json()
+
 def get_workspaces_link():
     return API_LINK + "/workspaces/"
-
 
 def get_tasks_link(workspace_id, project_id):
     return API_LINK + f"/workspaces/{workspace_id}/projects/{project_id}/tasks"
@@ -54,42 +58,35 @@ def sec_to_normal_format(duration):
 
 def get_workspaces_info():
     link = get_workspaces_link()
-    r = requests.get(link, headers=SECRET_HEADERS)
-    return r.json()
+    return get_json(link)
 
 
 def get_projects_info(workspace_id: str) -> dict:
     link = get_projects_link(workspace_id)
-    r = requests.get(link, headers=SECRET_HEADERS)
-    return r.json()
+    return get_json(link)
 
 
 def get_project_info(workspace_id: str, project_id: str) -> dict:
     link = get_project_link(workspace_id, project_id)
-    r = requests.get(link, headers=SECRET_HEADERS)
-    return r.json()
+    return get_json(link)
 
 
 def get_tasks_info(workspace_id: str, project_id: str) -> dict:
     link = get_tasks_link(workspace_id, project_id)
-    r = requests.get(link, headers=SECRET_HEADERS)
-    return r.json()
+    return get_json(link)
 
 
 def get_task_info(workspace_id: str, project_id: str, task_id) -> dict:
     link = get_task_link(workspace_id, project_id, task_id)
-    r = requests.get(link, headers=SECRET_HEADERS)
-    return r.json()
+    return get_json(link)
 
 
 def get_users(workspace_id):
     link = get_users_link(workspace_id)
-    r = requests.get(link, headers=SECRET_HEADERS)
-    return r.json()
+    return get_json(link)
 
 
 def get_time_entries(workspace_id, user_id):
     link = get_time_entries_link(workspace_id, user_id)
-    r = requests.get(link, headers=SECRET_HEADERS)
-    return r.json()
+    return get_json(link)
 
